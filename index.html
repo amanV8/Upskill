@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Upskill</title>
+  </head>
+  <body>
+    <header>
+      <h1>UPSKILL</h1>
+      <input type="search" placeholder="Skill, Job, Company" id="search" />
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Notifications</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="profile">
+        <img
+          src="profile-picture.png"
+          alt="Profile Picture"
+          width="100"
+          height="100"
+        />
+        <h2>Nayan Rathi</h2>
+        <p>Student at G.H. Raisoni College of Engineering (GHRCE), Nagpur</p>
+        <a href="#">See full educational profile here</a>
+      </section>
+
+      <section id="progress">
+        <div>
+          <h3>Skill Proficiency Meter</h3>
+          <canvas id="myChart"></canvas>
+        </div>
+        <div class="details">
+          <p class="heading">Education Level:</p>
+          <p>Undergraduate</p>
+          <p class="heading">Domain:</p>
+          <p >Full Stack Web Development</p>
+          <p class="heading">Rank: </p>
+          <p>8</p>
+        </div>
+      </section>
+
+      <section id="actions">
+        <button
+          class="skill-assess"
+          style="background-color: rgb(55, 55, 255); color: white"
+        >
+          Continue Skill Assessment
+        </button>
+        <button>Road Map</button>
+        <button>Group Projects</button>
+        <button>Resume Wizard</button>
+      </section>
+    </main>
+    <div id="recommendation-sec">
+      <!-- Course Recommendation Section -->
+      <section id="course-recom">
+        <h2>Course Recommendations</h2>
+        <ul class="course-list">
+          <li class="course">
+            <div class="images">
+              <img src="./src/angela yu.PNG" alt="Angela Yu's Web Development Bootcamp">
+            </div>
+            <div class="info">
+              <h4>Web Dev Bootcamp</h4>
+              <p>Platform: Udemy</p>
+            </div>
+          </li>
+    
+          <li class="course">
+            <div class="images">
+              <img src="./src/course2.PNG" alt="Another Udemy Course">
+            </div>
+            <div class="info">
+              <h4>Advanced JavaScript 2024</h4>
+              <p>Platform: Udemy</p>
+            </div>
+          </li>
+    
+          <li class="course">
+            <div class="images">
+              <img src="./src/courseracourse.PNG" alt="Coursera Web Development Course">
+            </div>
+            <div class="info">
+              <h4>Full Stack Development</h4>
+              <p>Platform: Coursera</p>
+            </div>
+          </li>
+
+          <li class="course">
+            <div class="images">
+              <img src="./src/course2.PNG" alt="Another Udemy Course">
+            </div>
+            <div class="info">
+              <h4>Advanced JavaScript 2024</h4>
+              <p>Platform: Udemy</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+    
+      <!-- Job Recommendation Section -->
+      <section id="job-recom">
+        <h2>Job Recommendations</h2>
+        <ul class="job-list">
+          <li class="job">
+            <div class="images">
+              <img src="./src/google.PNG" alt="Web Developer Position">
+            </div>
+            <div class="info">
+              <h4>Front-end Developer</h4>
+              <p>Company: Google</p>
+              <p>Location: Remote</p>
+            </div>
+          </li>
+    
+          <li class="job">
+            <div class="images">
+              <img src="./src/microsoft.PNG" alt="Full-stack Developer Position">
+            </div>
+            <div class="info">
+              <h4>Full-stack Developer</h4>
+              <p>Company: Microsoft</p>
+              <p>Location: Remote</p>
+            </div>
+          </li>
+
+          <li class="job">
+            <div class="images">
+              <img src="./src/google.PNG" alt="Web Developer Position">
+            </div>
+            <div class="info">
+              <h4>Front-end Developer</h4>
+              <p>Company: Google</p>
+              <p>Location: Remote</p>
+            </div>
+          </li>
+
+          <li class="job">
+            <div class="images">
+              <img src="./src/microsoft.PNG" alt="Full-stack Developer Position">
+            </div>
+            <div class="info">
+              <h4>Full-stack Developer</h4>
+              <p>Company: Microsoft</p>
+              <p>Location: Bangalore</p>
+            </div>
+          </li>
+
+          
+        </ul>
+      </section>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+            const chartData = {
+        labels: ["mastered", "pending"],
+        data: [86, 14],
+      };
+
+      const Mychart = document.getElementById("myChart");
+
+      new Chart(Mychart, {
+        type: "doughnut",
+        data: {
+          labels: chartData.labels,
+          datasets: [
+            {
+              label: "Skill Proficiency",
+              data: chartData.data,
+            },
+          ],
+        },
+        options: {
+          plugins: {
+            legend: {
+              display: false,
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
