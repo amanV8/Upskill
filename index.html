@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="src/css/styles.css" />
     <title>Upskill</title>
   </head>
   <body>
@@ -21,7 +21,7 @@
     <main>
       <section id="profile">
         <img
-          src="profile-picture.png"
+          src="./src/images/profile-picture.jpg"
           alt="Profile Picture"
           width="100"
           height="100"
@@ -48,6 +48,7 @@
 
       <section id="actions">
         <button
+          id="continue-assessment"
           class="skill-assess"
           style="background-color: rgb(55, 55, 255); color: white"
         >
@@ -65,7 +66,7 @@
         <ul class="course-list">
           <li class="course">
             <div class="images">
-              <img src="./src/angela yu.PNG" alt="Angela Yu's Web Development Bootcamp">
+              <img src="./src/images/angelayu.PNG" alt="Angela Yu's Web Development Bootcamp">
             </div>
             <div class="info">
               <h4>Web Dev Bootcamp</h4>
@@ -75,7 +76,7 @@
     
           <li class="course">
             <div class="images">
-              <img src="./src/course2.PNG" alt="Another Udemy Course">
+              <img src="./src/images/course2.PNG" alt="Another Udemy Course">
             </div>
             <div class="info">
               <h4>Advanced JavaScript 2024</h4>
@@ -85,7 +86,7 @@
     
           <li class="course">
             <div class="images">
-              <img src="./src/courseracourse.PNG" alt="Coursera Web Development Course">
+              <img src="./src/images/courseracourse.PNG" alt="Coursera Web Development Course">
             </div>
             <div class="info">
               <h4>Full Stack Development</h4>
@@ -95,7 +96,7 @@
 
           <li class="course">
             <div class="images">
-              <img src="./src/course2.PNG" alt="Another Udemy Course">
+              <img src="./src/images/course2.PNG" alt="Another Udemy Course">
             </div>
             <div class="info">
               <h4>Advanced JavaScript 2024</h4>
@@ -111,7 +112,7 @@
         <ul class="job-list">
           <li class="job">
             <div class="images">
-              <img src="./src/google.PNG" alt="Web Developer Position">
+              <img src="./src/images/google.PNG" alt="Web Developer Position">
             </div>
             <div class="info">
               <h4>Front-end Developer</h4>
@@ -122,7 +123,7 @@
     
           <li class="job">
             <div class="images">
-              <img src="./src/microsoft.PNG" alt="Full-stack Developer Position">
+              <img src="./src/images/microsoft.PNG" alt="Full-stack Developer Position">
             </div>
             <div class="info">
               <h4>Full-stack Developer</h4>
@@ -133,7 +134,7 @@
 
           <li class="job">
             <div class="images">
-              <img src="./src/google.PNG" alt="Web Developer Position">
+              <img src="./src/images/google.PNG" alt="Web Developer Position">
             </div>
             <div class="info">
               <h4>Front-end Developer</h4>
@@ -144,7 +145,7 @@
 
           <li class="job">
             <div class="images">
-              <img src="./src/microsoft.PNG" alt="Full-stack Developer Position">
+              <img src="./src/images/microsoft.PNG" alt="Full-stack Developer Position">
             </div>
             <div class="info">
               <h4>Full-stack Developer</h4>
@@ -160,33 +161,7 @@
     
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-            const chartData = {
-        labels: ["mastered", "pending"],
-        data: [86, 14],
-      };
-
-      const Mychart = document.getElementById("myChart");
-
-      new Chart(Mychart, {
-        type: "doughnut",
-        data: {
-          labels: chartData.labels,
-          datasets: [
-            {
-              label: "Skill Proficiency",
-              data: chartData.data,
-            },
-          ],
-        },
-        options: {
-          plugins: {
-            legend: {
-              display: false,
-            },
-          },
-        },
-      });
-    </script>
+    <script src="src/js/index.js"></script>
+    
   </body>
 </html>
