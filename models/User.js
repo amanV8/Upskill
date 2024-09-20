@@ -23,6 +23,10 @@ const userSchema = new mongoose.Schema({
     enum: ['user', 'admin', 'employer'],
     default: 'user',
   },
+  profile:{
+    bio:{type: string},
+    skills:{type: string},
+  },
   createdAt: {
     type: Date,
     default: Date.now,
