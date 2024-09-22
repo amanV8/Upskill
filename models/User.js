@@ -24,8 +24,8 @@ const userSchema = new mongoose.Schema({
     default: 'user',
   },
   profile:{
-    bio:{type: string},
-    skills:{type: string},
+    bio:{type: String},
+    skills:{type: String},
   },
   createdAt: {
     type: Date,
